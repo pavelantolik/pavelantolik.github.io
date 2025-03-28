@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="5">
     <title>Auto Refresh Test</title>
     <style>
         html, body {padding: 0; margin: 0;}
@@ -25,9 +24,14 @@
         let timeLeft = 5;
         const countdownElement = document.getElementById('countdown');
 
-        setInterval(() => {
+        const timer = setInterval(() => {
             timeLeft -= 1;
             countdownElement.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                location.reload();
+            }
         }, 1000);
     </script>
 </body>
