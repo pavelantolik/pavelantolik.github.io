@@ -1,8 +1,8 @@
-<!-- index.html -->
+<!-- page.html -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page 1</title>
+    <title>Page 2</title>
     <style>
         html, body {padding: 0; margin: 0;}
         body {
@@ -19,7 +19,7 @@
      </style>
 </head>
 <body>
-    <div>Redirecting to Page: <span id="countdown">5</span> seconds</div>
+    <div>Redirecting to Index in: <span id="countdown">5</span> seconds</div>
 
     <script>
         let timeLeft = 5;
@@ -31,7 +31,7 @@
 
             if (timeLeft <= 0) {
                 clearInterval(timer);
-                window.location.href = 'page.html';
+                window.location.href = 'index.html';
             }
         }, 1000);
     </script>
